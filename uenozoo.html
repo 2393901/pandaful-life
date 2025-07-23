@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index-header</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="index.css">
+<head>
+<body>
+    
+    <header>
+        <a href="/index.html">
+        <img class="logo" src="image/pandafullife_logo.png" alt="pandafullife-logo">
+        </a>
+
+        <button class="menu-btn" aria-label="open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    
+        <nav class="menu_flex">
+            <ul>
+            <li><a href="/aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="/uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="/quiz.html">クイズ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+  <title>button</title>
+  <style>
+    .menu_zoo {
+      display: inline-block;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      background-color: white;
+      border: 3px solid rgb(192, 209, 192);
+      border-radius: 30px;
+      padding: 10px 30px;
+      margin: 20px;
+      color: black;
+      width: 220px;
+    }
+
+    .zoo_button_area {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap; /* 화면이 작아졌을 때 줄바꿈되도록 */
+    }
+
+    .button-link:hover {
+      background-color: #eaffea;
+    }
+  </style>
+
+  <title>シャンシャン</title>
+  <style>
+    .uenozoo {
+      width: 650px;
+      margin: 0 auto;
+      line-height: 160%;
+    }
+
+    .uenozoo a1 {
+      font-size: 0.3em;
+    }
+
+    .menu_zoo ul {
+      display: flex;
+    }
+
+    .menu_zoo ul li {
+      flex: 1; /* ■■ 各メニューを1対1対1...にする（箇条書きのアイテム）*/
+    }
+
+    .panda-table {
+      width: 500px;
+      margin: 1.2rem auto 0; /* 가운데 정렬 */
+      border-collapse: collapse;
+      border: 2px solid #000;
+      background: linear-gradient(#ffffff);
+      color: #000;
+      line-height: 150%;
+      font-size: 0.9rem;
+    }
+
+    .panda-table th,
+    .panda-table td {
+      border: 1px solid #000;
+      padding: 8px;
+      color: #000;
+      background-color: #fff;
+      vertical-align: top;
+    }
+
+    .panda-table th {
+      background-color: #fff;
+    }
+
+    .panda-table .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .panda-table .image {
+      padding: 0;
+    }
+
+    .panda-table .image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="zoo_button_area">
+    <a href="/uenozoo.html" class="menu_zoo">
+    🗼東京都🗼<br>上野動物園
+  </a>
+
+  <a href="/adventureworld.html" class="menu_zoo">
+    🍊和歌山県🍊<br>アドベンチャーワールド
+  </a>
+</div>
+
+<div class="uenozoo">
+上野動物園は、1972年に日本で初めてパンダを迎えた動物園です。<br>
+2011年に、中国からリーリーとシンシンが日本にやってきました。<br>
+そして2017年に、赤ちゃんパンダのシャンシャンが生まれ、日本ではパンダブームがおこりました。<br>
+2023年、シャンシャンが中国へ帰るときは、多くの人がさびしさで涙を流しました。<br>
+今は、リーリーとシンシンも健康のために中国へ戻り、双子のシャオシャオとレイレイだけが日本に残っています。<br>
+<a1>※プロフィールはリーリーとシンシンの間で生まれた子どものみ</a1>
+</div>
+
+<table class="panda-table">
+  <tr>
+    <th colspan="2" class="title">
+      シャンシャン<br>
+      <span style="font-size:0.9em;">香香 ｜ Xiang Xiang</span>
+    </th>
+  </tr>
+  <tr>
+    <td colspan="3" class="image">
+      <img src="파일:xiangxiang.jpg" alt="シャンシャン">
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="width:25%;"><strong>生誕</strong></td>
+    <td colspan="2">2017年6月12日</td>
+  </tr>
+  <tr>
+    <td colspan="2">日本東京都台東区上野公園9-83 恩賜上野動物園</td>
+  </tr>
+  <tr>
+    <td><strong>住所</strong></td>
+    <td colspan="2">中国四川省雅安ジャイアントパンダ研究センター碧峰峡基地</td>
+  </tr>
+  <tr>
+    <td><strong>性別</strong></td>
+    <td colspan="2">メス</td>
+  </tr>
+  <tr>
+    <td><strong>家族</strong></td>
+    <td colspan="2">
+      母 シンシン、父 リーリー<br>
+      弟 シャオシャオ、妹 レイレイ
+    </td>
+  </tr>
+</table>
+
+<table class="panda-table">
+  <tr>
+    <th colspan="3" class="title">
+      シャオシャオ<br>
+      <span style="font-size:0.9em;">暁暁 ｜ Xiao Xiao</span>
+    </th>
+  </tr>
+  <tr>
+    <td colspan="3" class="image">
+      <img src="파일:xiaoxiao.jpg" alt="シャオシャオ">
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="width:25%;"><strong>生誕</strong></td>
+    <td colspan="2">2021年6月23日</td>
+  </tr>
+  <tr>
+    <td colspan="2">日本東京都台東区上野公園9-83 恩賜上野動物園</td>
+  </tr>
+  <tr>
+    <td><strong>住所</strong></td>
+    <td colspan="2">日本東京都台東区上野公園9-83 恩賜上野動物園</td>
+  </tr>
+  <tr>
+    <td><strong>性別</strong></td>
+    <td colspan="2">オス</td>
+  </tr>
+  <tr>
+    <td><strong>家族</strong></td>
+    <td colspan="3">
+      母 シンシン、父 リーリー<br>
+      姉 シャンシャン<br>
+      双子 レイレイ
+    </td>
+  </tr>
+</table>
+
+<table class="panda-table">
+  <tr>
+    <th colspan="3" class="title">
+      レイレイ<br>
+      <span style="font-size:0.9em;">蕾蕾 ｜ Lei Lei</span>
+    </th>
+  </tr>
+  <tr>
+    <td colspan="3" class="image">
+      <img src="파일:leilei.jpg" alt="レイレイ">
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="width:25%;"><strong>生誕</strong></td>
+    <td colspan="2">2021年6月23日</td>
+  </tr>
+  <tr>
+    <td colspan="2">日本東京都台東区上野公園9-83 恩賜上野動物園</td>
+  </tr>
+  <tr>
+    <td><strong>住所</strong></td>
+    <td colspan="2">日本東京都台東区上野公園9-83 恩賜上野動物園</td>
+  </tr>
+  <tr>
+    <td><strong>性別</strong></td>
+    <td colspan="2">メス</td>
+  </tr>
+  <tr>
+    <td><strong>家族</strong></td>
+    <td colspan="3">
+      母 シンシン、父 リーリー<br>
+      姉 シャンシャン<br>
+      双子 シャオシャオ    </td>
+  </tr>
+  <tr>
+</table>
+
+</body>
+</html>
