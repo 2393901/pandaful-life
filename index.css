@@ -116,8 +116,9 @@ header {
 
 /* 画面幅600px以下でのレスポンシブ対応 */
 @media (max-width: 600px) {
-  /* スライドからコピペしてくる */
-  /* メニューを画面外に隠し、開いたときにスライドイン */
+  .information {
+    width: 80%;
+  }
   .menu {
     position: fixed;
     top: 0;
