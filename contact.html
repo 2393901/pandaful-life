@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index-header</title>
+    <title>ぱんだふるらいふ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
     <link rel="stylesheet" href="index.css">
-<head>
+</head>
 <body>
     
     <header>
-        <a href="/pandaful-life/index.html">
+        <a href="/index.html">
         <img class="logo" src="image/pandafullife_logo.png" alt="pandafullife-logo">
         </a>
-        
+
         <button class="menu-btn" aria-label="open menu">
             <span></span><span></span><span></span>
         </button>
     </header>
     
-        <nav class="menu_flex">
+        <nav class="menu">
             <ul>
-            <li><a href="/pandaful-life/aboutpanda.html">ジャイアントパンダとは</a></li>
-            <li><a href="/pandaful-life/uenozoo.html">パンダプロフィール</a></li>
-            <li><a href="/pandaful-life/quiz.html">クイズ</a></li>
-            <li><a href="/pandaful-life/contact.html">Contact</a></li>
+            <li><a href="/aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="/uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="/quiz.html">クイズ</a></li>
+            <li><a href="/contact.html">連絡</a></li>
             </ul>
         </nav>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
@@ -64,6 +64,68 @@ input[type=submit]:hover {
   padding: 20px;
   margin: 2rem auto;
 }
+
+@media (max-width: 600px) {
+  /* スライドからコピペしてくる */
+  /* メニューを画面外に隠し、開いたときにスライドイン */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    opacity: 0.9;
+    transition: 0.3s;
+    padding-top: /*60px*/ 20vh;
+    z-index: 99;
+  }
+/* メニューが開いた状態*/
+  .menu.open {
+    right: 0;
+    background-color: rgb(192, 209, 192);
+  }
+
+/* メニューリストを縦並びに*/
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+
+/* メニュー項目のスタイル*/
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  .menu ul li a {
+    color: black;
+    border: none;
+  }
+
+/* メニューボタンをflex表示に*/
+  .menu-btn {
+    display: flex;
+  }
+
+/* メニューボタンが開いた時のアニメーション(1本目のバー) */
+  .menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+/* メニューボタンが開いた時のアニメーション(2本目のバーを消す) */
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+/* メニューボタンが開いた時のアニメーション(3本目のバー) */
+  .menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .container {
+    width: 80%;
+  }
+}
 </style>
 </head>
 <body>
@@ -83,5 +145,6 @@ input[type=submit]:hover {
   </form>
 </div>
 
+<script src="index.js"></script>
 </body>
 </html>
