@@ -1,52 +1,27 @@
-// ハンバーガーメニューの開閉処理
-const slides = document.querySelectorAll('.slide');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
-let currentIndex = 0;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-}
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-});
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-});
-
-showSlide(currentIndex); // 초기 표시
-
 document.addEventListener('DOMContentLoaded', function() {
   // メニューボタンとメニュー本体を取得
   const menuBtn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.menu');
 
-  // メニューボタンをクリックしたとき、メニューの開閉をトグル
-  menuBtn.addEventListener('click', function(e) {
-    e.stopPropagation(); // イベントのバブリングを止める
-    menu.classList.toggle('open'); // メニューの表示/非表示を切り替え（クラスをaddまたはremove）
-    menuBtn.classList.toggle('open'); // ボタンのアニメーション切り替え（クラスをaddまたはremove）
-  });
+  // 要素が存在する場合のみイベントリスナーを登録
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      menu.classList.toggle('open');
+      menuBtn.classList.toggle('open');
+    });
 
-  // メニュー内をクリックしたとき
-  menu.addEventListener('click', function(e) {
-    // メニュー内のリンクをクリックしたときだけメニューを閉じる
-    if(e.target.tagName === 'A') {
+    menu.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        menuBtn.classList.remove('open');
+      }
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', function() {
       menu.classList.remove('open');
       menuBtn.classList.remove('open');
-    }
-    e.stopPropagation(); // イベントのバブリングを止める
-  });
-
-  // ドキュメントのどこかをクリックしたらメニューを閉じる
-  document.addEventListener('click', function() {
-    menu.classList.remove('open');
-    menuBtn.classList.remove('open');
-  });
+    });
+  }
 });
