@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-/* スムーズスクロールを有効化 */
 html{
   scroll-behavior: smooth;
 }
 
-/* ヘッダーのレイアウト設定 */
 header {
   background-color: rgb(192, 209, 192);
   display: flex;
@@ -16,42 +14,36 @@ header {
   flex-wrap: wrap;
 }
 
-nav.menu_flex { /*メニューを最上部に固定*/
-    width: 100%;
-    top: 0;
+.menu {
+  width: 100%;
+  top: 0;
 
 }
-nav.menu_flex ul {
-   display: flex; /* ■■ メニュー全体をflex対応にする（箇条書きの外枠）*/
+.menu ul {
+   display: flex;
 }
-nav.menu_flex ul li {
-   flex: 1; /* ■■ 各メニューを1対1対1...にする（箇条書きのアイテム）*/
+.menu ul li {
+   flex: 1;
 }
 
-nav.menu_flex ul li a { /*メニューアイテムの設定*/
-/*    background-color: white;*/
+.menu ul li a {
     color: gray;
-    display: block; /* 文字以外の場所もクリック可能にする*/
-    text-align: center; /* 文字を中央にする */
+    display: block;
+    text-align: center;
     height: 2em;
     line-height: 2em;
-    text-decoration: none; /* 下線を消す */
-
-    border-left: 0.1em gray solid/* ■■ 各メニューの左にボーダーライン*/
+    border-left: 0.1em gray solid
 }
-nav.menu_flex ul {
-    border-right: 0.1em gray solid/* ■■ 最後のメニューの右にボーダーライン*/
+.menu ul {
+    border-right: 0.1em gray solid
 }
 
-/* ロゴ画像の最大高を指定 */
 .logo{
   max-height: 5rem;
 }
 
-/* メニューボタン（ハンバーガーアイコン）の基本スタイル */
 .menu-btn {
   display: none;
-  /* background-color: red; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -61,7 +53,6 @@ nav.menu_flex ul {
   z-index: 100;
 }
 
-/* メニューボタン内のバーのスタイル */
 .menu-btn span {
   display: block;
   width: 28px;
@@ -73,24 +64,10 @@ nav.menu_flex ul {
 }
 
 .information {
-  width: 800px;
+  width: 70%;
   margin: 20px auto 0px;
   line-height: 160%;
   text-align: center;
-}
-
-/* セクションの余白と背景色、テキスト両端揃え */
-section{
-  margin: 3rem 0;
-  padding: 1rem;
-  background-color: aliceblue;
-  text-align: justify;
-}
-
-/* セクションタイトルのスタイル */
-h2{
-  font-size: large;
-  font-weight: bold;
 }
 
 .slider-container {
@@ -155,12 +132,14 @@ h2{
 /* メニューが開いた状態*/
   .menu.open {
     right: 0;
+    background-color: rgb(192, 209, 192);
   }
 
 /* メニューリストを縦並びに*/
   .menu ul {
     flex-direction: column;
     width: 100%;
+    border: none;
   }
 
 /* メニュー項目のスタイル*/
@@ -168,6 +147,11 @@ h2{
     width: 100%;
     text-align: center;
     padding: 1rem 2rem;
+  }
+
+  .menu ul li a {
+    color: black;
+    border: none;
   }
 
 /* メニューボタンをflex表示に*/
