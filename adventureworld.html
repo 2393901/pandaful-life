@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index-header</title>
+    <title>ぱんだふるらいふ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
     <link rel="stylesheet" href="index.css">
-<head>
+</head>
 <body>
     
     <header>
-        <a href="/pandaful-life/index.html">
+        <a href="/index.html">
         <img class="logo" src="image/pandafullife_logo.png" alt="pandafullife-logo">
         </a>
 
@@ -19,12 +19,12 @@
         </button>
     </header>
     
-        <nav class="menu_flex">
+        <nav class="menu">
             <ul>
-            <li><a href="/pandaful-life/aboutpanda.html">ジャイアントパンダとは</a></li>
-            <li><a href="/pandaful-life/uenozoo.html">パンダプロフィール</a></li>
-            <li><a href="/pandaful-life/quiz.html">クイズ</a></li>
-            <li><a href="/pandaful-life/contact.html">Contact</a></li>
+            <li><a href="/aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="/uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="/quiz.html">クイズ</a></li>
+            <li><a href="/contact.html">連絡</a></li>
             </ul>
         </nav>
 
@@ -78,7 +78,7 @@
 
     .panda-table {
       width: 500px;
-      margin: 1.2rem auto 0; /* 가운데 정렬 */
+      margin: 1.2rem auto; /* 가운데 정렬 */
       border-collapse: collapse;
       border: 2px solid #000;
       background: linear-gradient(#ffffff);
@@ -116,15 +116,77 @@
       display: block;
     }
 
+    @media (max-width: 600px) {
+    .adventureworld {
+      width: 80%;
+    }
+    .menu_zoo {
+      width: 33%;
+    }
+
+    .panda-table {
+      width: 70%;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100vw;
+      width: 70vw;
+      height: 100vh;
+      opacity: 0.9;
+      transition: 0.3s;
+      padding-top: /*60px*/ 20vh;
+      z-index: 99;
+    }
+
+    .menu.open {
+      right: 0;
+      background-color: rgb(192, 209, 192);
+    }
+
+    .menu ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .menu ul li {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    .menu ul li a {
+      color: black;
+      border: none;
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+
+    .menu-btn.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-btn.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
   </style>
 </head>
 <body>
   <div class="zoo_button_area">
-    <a href="/pandaful-life/uenozoo.html" class="menu_zoo">
+    <a href="/uenozoo.html" class="menu_zoo">
     🗼東京都🗼<br>上野動物園
   </a>
 
-  <a href="/pandaful-life/adventureworld.html" class="menu_zoo">
+  <a href="/adventureworld.html" class="menu_zoo">
     🍊和歌山県🍊<br>アドベンチャーワールド
   </a>
 </div>
@@ -146,7 +208,7 @@
   </tr>
   <tr>
     <td colspan="3" class="image">
-      <img src="파일:rauhin.jpg" alt="良浜">
+      <img src="image/blankimage.jpg" alt="画像準備中">
     </td>
   </tr>
   <tr>
@@ -188,7 +250,7 @@
   </tr>
   <tr>
     <td colspan="3" class="image">
-      <img src="파일:xiaoxiao.jpg" alt="シャオシャオ">
+      <img src="image/blankimage.jpg" alt="画像準備中">
     </td>
   </tr>
   <tr>
@@ -226,7 +288,7 @@
   </tr>
   <tr>
     <td colspan="3" class="image">
-      <img src="파일:saihin.jpg" alt="彩浜">
+      <img src="image/blankimage.jpg" alt="画像準備中">
     </td>
   </tr>
   <tr>
@@ -264,7 +326,7 @@
   </tr>
   <tr>
     <td colspan="3" class="image">
-      <img src="파일:xiaoxiao.jpg" alt="シャオシャオ">
+      <img src="image/blankimage.jpg" alt="画像準備中">
     </td>
   </tr>
   <tr>
@@ -292,5 +354,6 @@
   </tr>
 </table>
 
+<script src="index.js"></script>
 </body>
 </html>
