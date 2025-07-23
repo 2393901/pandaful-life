@@ -21,10 +21,10 @@
     
         <nav class="menu">
             <ul>
-            <li><a href="/aboutpanda.html">ジャイアントパンダとは</a></li>
-            <li><a href="/uenozoo.html">パンダプロフィール</a></li>
-            <li><a href="/quiz.html">クイズ</a></li>
-            <li><a href="/contact.html">連絡</a></li>
+            <li><a href="aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="quiz.html">クイズ</a></li>
+            <li><a href="contact.html">連絡</a></li>
             </ul>
         </nav>
 
@@ -184,8 +184,7 @@
           option.classList.add('correct');
           feedback.textContent = "🎉 正解です！";
           answered = true;
-
-          // 오답 옵션은 클릭 못하게
+            
           options.forEach(o => {
             if (o !== option) o.style.pointerEvents = 'none';
           });
