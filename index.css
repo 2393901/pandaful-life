@@ -15,6 +15,15 @@ header {
   flex-wrap: wrap;
 }
 
+.footer {
+  background-color: rgb(192, 209, 192);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
 .menu {
   width: 100%;
   top: 0;
