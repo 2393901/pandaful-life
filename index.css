@@ -10,6 +10,7 @@ header {
   justify-content: space-between;
   max-width: 100%;
   margin: 0 auto;
+  padding: 1em;
   align-items: center;
   flex-wrap: wrap;
 }
